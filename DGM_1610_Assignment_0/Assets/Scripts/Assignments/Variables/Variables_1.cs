@@ -27,7 +27,7 @@ public class Variables_1 : MonoBehaviour
     {
         float total;
         total = money - amount * cost;
-        print(total);
+        print("You have:" + total);
     }
     void CheckScore()
     {
