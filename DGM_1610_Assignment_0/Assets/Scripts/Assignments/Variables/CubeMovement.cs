@@ -41,6 +41,10 @@ public class CubeMovement : MonoBehaviour
         {
             transform.Rotate(0, lookSpd, 0);
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            transform.Translate(0, lookSpd, 0);
+        }
 
 
     }
