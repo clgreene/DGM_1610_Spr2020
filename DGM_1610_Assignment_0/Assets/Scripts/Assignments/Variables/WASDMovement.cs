@@ -4,32 +4,18 @@ using UnityEngine;
 
 public class WASDMovement : MonoBehaviour
 {
-    float moveSpd = 0.3f;
+    public CharacterController controller;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float moveSpd = 12f;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(0, 0, moveSpd);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(-moveSpd, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(0, 0, -moveSpd);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(moveSpd, 0, 0);
-        }
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        Vector3 move = transform.right * x + transform.forward * z;
+
+        controller.Move(move * moveSpd * Time.deltaTime);
     }
 }
