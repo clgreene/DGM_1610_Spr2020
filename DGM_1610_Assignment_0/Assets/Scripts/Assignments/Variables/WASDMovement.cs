@@ -7,8 +7,8 @@ public class WASDMovement : MonoBehaviour
     public CharacterController controller;
 
     public float moveSpd = 12f;
-    public float gravity = -9.8f;
-    public float jumpSpd = 3f;
+    public float gravity = -18f;
+    public float jumpSpd = 2f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -38,7 +38,7 @@ public class WASDMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpSpd * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpSpd * -1f * gravity);
         }
 
         velocity.y += gravity * Time.deltaTime;
