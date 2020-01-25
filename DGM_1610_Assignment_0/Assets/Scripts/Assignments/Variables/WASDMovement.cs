@@ -11,7 +11,7 @@ public class WASDMovement : MonoBehaviour
     public float jumpSpd = 2f;
 
     public Transform groundCheck;
-    public float groundDistance = 0.4f;
+    public float groundDistance = .4f;
     public LayerMask groundMask;
 
 
