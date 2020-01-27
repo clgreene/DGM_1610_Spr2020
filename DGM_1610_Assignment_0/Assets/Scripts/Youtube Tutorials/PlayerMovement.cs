@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody rb;
-    public float playerSpeed = 1000f;
-    public float playerStrafe = 60f;
+    public float playerSpeed = 1800f;
+    public float playerStrafe = 80f;
 
     // Start is called before the first frame update
     // Update is called once per frame
