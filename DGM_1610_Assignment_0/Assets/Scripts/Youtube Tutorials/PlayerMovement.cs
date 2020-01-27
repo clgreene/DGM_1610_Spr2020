@@ -6,16 +6,25 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody rb;
+    public float playerSpeed = 0f;
+    public float playerStrafe = 500f;
 
     // Start is called before the first frame update
-    void Start()
-    {        
-        Debug.Log("It's the Libians!!");
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.AddForce(0, 0, 2000 * Time.deltaTime);
+        //rb.AddForce(0, 0, playerSpeed * Time.deltaTime);
+
+        if (Input.GetKey("d"))
+        {
+            rb.AddForce(playerStrafe * Time.deltaTime, 0, 0);
+        }
+
+        if (Input.GetKey("a"))
+        {
+            rb.AddForce(-playerStrafe * Time.deltaTime, 0, 0);
+        }
+
+    
     }
 }
