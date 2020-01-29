@@ -9,9 +9,10 @@ public class Collisions : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             movement.enabled = false;
+            FindObjectOfType<GameMan>().EndGame();
         }
     }
 }
