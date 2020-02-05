@@ -8,6 +8,7 @@ public class GameMan : MonoBehaviour
 
     bool gameHasEnded = false;
     public float delay = 1f;
+
     public void EndGame ()
     {
         if (gameHasEnded == false)
@@ -22,6 +23,11 @@ public class GameMan : MonoBehaviour
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void WinLevel()
+    {
+        Debug.Log("You Win!");
     }
 
 }
