@@ -7,7 +7,7 @@ public class Pickups : MonoBehaviour
 
     public string pickupName;
     public string pickupType;
-    public int score;
+    public int points;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class Pickups : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            ScoreManager.AddPoints(score);
+            ScoreManager.AddPoints(points);
             Destroy(gameObject);
         }
     }
