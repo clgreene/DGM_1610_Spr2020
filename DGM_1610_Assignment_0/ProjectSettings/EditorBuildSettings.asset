@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Brackeys_Runner.unity
+    guid: 65fa11038db0ac94f9f70fc8a3cc34a0
   m_configObjects: {}
