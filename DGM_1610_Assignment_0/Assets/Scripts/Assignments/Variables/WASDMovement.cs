@@ -14,6 +14,8 @@ public class WASDMovement : MonoBehaviour
     public float groundDistance = .4f;
     public LayerMask groundMask;
 
+    
+
 
     Vector3 velocity;
     bool isGrounded;
@@ -24,6 +26,8 @@ public class WASDMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
+        
+        
         if(isGrounded && velocity.y < 0)
         {
             velocity.y = -.2f;
