@@ -15,8 +15,7 @@ public class Pickups : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
