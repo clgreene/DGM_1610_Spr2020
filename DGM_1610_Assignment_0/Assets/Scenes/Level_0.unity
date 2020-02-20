@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 1119993486}
   - component: {fileID: 1119993488}
   - component: {fileID: 1119993489}
+  - component: {fileID: 1119993490}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -405,6 +406,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ced23acff68cf44da61f5d9390cf50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1119993490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119993485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e62494c222230d4a98c29ed5a71cff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 8262568949610167638, guid: da366eb7f27b54c4cb32e08380cfdbe1, type: 3}
+  enemyIndex: 0
 --- !u!1 &1148579242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1179,7 @@ PrefabInstance:
     - target: {fileID: 8262568949610167635, guid: da366eb7f27b54c4cb32e08380cfdbe1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4098186
+      value: 7.27
       objectReference: {fileID: 0}
     - target: {fileID: 8262568949610167635, guid: da366eb7f27b54c4cb32e08380cfdbe1,
         type: 3}
@@ -1173,7 +1189,7 @@ PrefabInstance:
     - target: {fileID: 8262568949610167635, guid: da366eb7f27b54c4cb32e08380cfdbe1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2171392
+      value: 6.02
       objectReference: {fileID: 0}
     - target: {fileID: 8262568949610167635, guid: da366eb7f27b54c4cb32e08380cfdbe1,
         type: 3}
