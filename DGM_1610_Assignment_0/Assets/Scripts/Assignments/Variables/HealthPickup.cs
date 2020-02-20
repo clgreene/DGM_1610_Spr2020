@@ -21,6 +21,6 @@ public class HealthPickup : Pickups
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        print("You Gained " + healthAmt + " health!");
     }
 }
