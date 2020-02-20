@@ -19,8 +19,16 @@ public class Pickups : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if (("health"))
+            {
+                print("You Gained " + healthAmt + " health!");
+            }
+            
             ScoreManager.AddPoints(points);
             Destroy(gameObject);
+
+            
+
         }
     }
 }
