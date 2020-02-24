@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPickup : Pickups
+public class CashPickup : Pickups
 {
-
-    public int healthAmt = 100;
-
     // Start is called before the first frame update
     void Start()
     {
-        print("Health: " + healthAmt);
+        
     }
 
     // Update is called once per frame
@@ -24,7 +21,7 @@ public class HealthPickup : Pickups
         if (other.gameObject.CompareTag("Player"))
         {
 
-            ScoreManager.AddHealth(value);
+            ScoreManager.AddPoints(value);
             Destroy(gameObject);
 
         }
