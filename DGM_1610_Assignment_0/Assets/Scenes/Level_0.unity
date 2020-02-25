@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 1241191193}
   - component: {fileID: 1241191192}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -547,8 +547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupName: Super Pill
-  pickupType: 
-  points: 0
+  pickupType: Health
+  value: 25
   healthAmt: 100
 --- !u!65 &1241191193
 BoxCollider:
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 1537366425}
   - component: {fileID: 1537366429}
   m_Layer: 0
-  m_Name: Pickup
+  m_Name: Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1054,12 +1054,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1537366424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81c617ac33613f243bb503daebfe5c92, type: 3}
+  m_Script: {fileID: 11500000, guid: 33b737155c018644abdca69ac077caf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupName: Cash
   pickupType: Money
-  points: 100
+  value: 50
 --- !u!1 &1858461500
 GameObject:
   m_ObjectHideFlags: 0
