@@ -21,7 +21,7 @@ public class HealthPickup : Pickups
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PlayerCharacter"))
         {
 
             ScoreManager.AddHealth(value);
