@@ -5,12 +5,12 @@ using UnityEngine;
 public class HealthPickup : Pickups
 {
 
-    public int healthAmt = 100;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        print("Health: " + healthAmt);
+        
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class HealthPickup : Pickups
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerCharacter"))
+        if (other.gameObject.CompareTag("Player"))
         {
 
             ScoreManager.AddHealth(value);
