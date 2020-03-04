@@ -16,11 +16,11 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("you hit an enemy!");
         if (other.gameObject.CompareTag("Enemy"))
         {
             var hit = other.gameObject;
             var health = hit.GetComponent<EnemyHealth>();
+            Destroy(gameObject);
 
             if (health != null)
             {

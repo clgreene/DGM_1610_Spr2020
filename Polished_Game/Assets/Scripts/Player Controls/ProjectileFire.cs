@@ -6,8 +6,8 @@ public class ProjectileFire : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    
 
+    public GameObject Cam;
     public GameObject projectilePrefab;
     void Start()
     {
@@ -21,7 +21,7 @@ public class ProjectileFire : MonoBehaviour
         //{
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation);
+                Instantiate(projectilePrefab, Cam.transform.position + transform.forward, transform.rotation);
                 //ammo -= 1;
             }
         //}
