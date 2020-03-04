@@ -28,6 +28,7 @@ public class Bullet : MonoBehaviour
                 Debug.Log("Oof!");
             }
         }
+        else Destroy(gameObject);
     }
 
     IEnumerator DestroyBullet()
