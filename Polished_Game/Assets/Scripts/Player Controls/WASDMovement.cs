@@ -11,7 +11,17 @@ public class WASDMovement : MonoBehaviour
     public float jumpSpd = 2f;
 
     Vector3 velocity;
-    
+
+    public bool isGrounded;
+    public float fuel = 1000;
+
+    private Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
 
 
     // Update is called once per frame
@@ -26,11 +36,29 @@ public class WASDMovement : MonoBehaviour
 
         if (Input.GetButton("Jump"))
         {
-            velocity.y = Mathf.Sqrt(jumpSpd * -1f * gravity);
+            while (fuel > 0)
+                {
+                    velocity.y = Mathf.Sqrt(jumpSpd * -1f * gravity);
+                    fuel -= 1;
+                }
+        }
+
+        if (isGrounded == true && fuel < 1000)
+        {
+            fuel += 1;
         }
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+            Debug.Log("Land!");
+        }
     }
 }
