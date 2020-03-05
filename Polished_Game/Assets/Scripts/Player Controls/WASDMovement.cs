@@ -34,18 +34,16 @@ public class WASDMovement : MonoBehaviour
 
         controller.Move(move * moveSpd * Time.deltaTime);
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump") && fuel > 0)
         {
-            while (fuel > 0)
-                {
-                    velocity.y = Mathf.Sqrt(jumpSpd * -1f * gravity);
-                    fuel -= 1;
-                }
+             velocity.y = Mathf.Sqrt(jumpSpd * -1f * gravity);
+             fuel --;
+                
         }
 
         if (isGrounded == true && fuel < 1000)
         {
-            fuel += 1;
+            fuel ++;
         }
 
         velocity.y += gravity * Time.deltaTime;
@@ -60,5 +58,16 @@ public class WASDMovement : MonoBehaviour
             isGrounded = true;
             Debug.Log("Land!");
         }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+            Debug.Log("Wheee!");
+        }
+
     }
 }
