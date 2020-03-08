@@ -13,7 +13,7 @@ public class WASDMovement : MonoBehaviour
     Vector3 velocity;
 
     public bool isGrounded;
-    public float fuel = 1000;
+    public static float fuel = 1000;
 
     private Rigidbody rb;
 
@@ -41,14 +41,26 @@ public class WASDMovement : MonoBehaviour
                 
         }
 
-        if (isGrounded == true && fuel < 1000)
-        {
-            fuel ++;
-        }
+        
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public static void AddFuel(int value)
+    {
+        if (fuel < 1000)
+        {
+            fuel += value;
+
+            if (fuel > 1000)
+            {
+                fuel = 1000;
+            }
+
+        }
+
     }
 
     private void OnCollisionEnter(Collision other)
