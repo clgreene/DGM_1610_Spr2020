@@ -6,12 +6,18 @@ using UnityEngine.UI;
 public class UpdateText : MonoBehaviour
 {
 
-    public Transform player;
+    public Text fuelText;
+
     public Text scoreText;
+
+    public Text healthText;
+    
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = player.position.z.ToString("0");
+        fuelText.text = WASDMovement.fuel.ToString("0");
+        scoreText.text = ScoreManager.score.ToString("0");
+        healthText.text = ScoreManager.health.ToString("0");
     }
 }

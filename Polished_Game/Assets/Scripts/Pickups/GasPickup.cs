@@ -15,10 +15,9 @@ public class GasPickup : Pickups
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
             WASDMovement.AddFuel(value);
             Destroy(gameObject);
-
+            Debug.Log("Got Gas");
         }
     }
 }

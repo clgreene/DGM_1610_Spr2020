@@ -59,6 +59,8 @@ public class WASDMovement : MonoBehaviour
                 fuel = 1000;
             }
 
+            Debug.Log("Filled Up");
+
         }
 
     }
