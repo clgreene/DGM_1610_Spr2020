@@ -24,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
         {
             currentHealth = 0;
             print("You Killed an Enemy!");
+            ScoreManager.score += points;
 
             transform.position = spawnPoint.position;
             transform.rotation = spawnPoint.rotation;

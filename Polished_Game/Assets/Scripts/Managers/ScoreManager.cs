@@ -7,7 +7,7 @@ public class ScoreManager : MonoBehaviour
 
     public static int score;
     public static int health = 100;
-    public static int ammo = 0;
+    public static int ammo = 10;
 
 
     // Start is called before the first frame update

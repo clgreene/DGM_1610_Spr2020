@@ -5,17 +5,15 @@ using UnityEngine;
 public class AmmoPickup : Pickups
 {
 
-    public int ammo;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            ScoreManager.AddAmmo(value);
+            Destroy(gameObject);
+            Debug.Log("Got Ammo");
+        }
     }
 }

@@ -19,10 +19,10 @@ public class ProjectileFire : MonoBehaviour
     {
         //if (ammo > 0)
         //{
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && ScoreManager.ammo > 0)
             {
                 Instantiate(projectilePrefab, Cam.transform.position + transform.forward, transform.rotation);
-                //ammo -= 1;
+                ScoreManager.ammo--;
             }
         //}
     }
