@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public float forwardForce = 800f;
     public float strafe = 9000f;
+    public Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("d"))
         {
-            rb.AddForce(strafe * Time.deltaTime, 0, 0);
+            
 
         }
 
