@@ -148,7 +148,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101121314}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -511,6 +511,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 148337487}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1133931072
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133931068}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5300115004599201601, guid: c6b7e66b7241a304ea7f045923c72a84, type: 3}
 --- !u!54 &1133931073
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -523,7 +537,29 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &1216404327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: c6b7e66b7241a304ea7f045923c72a84,
+    type: 3}
+  m_PrefabInstance: {fileID: 148337487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1216404329
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216404327}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -543,6 +579,10 @@ PrefabInstance:
     - target: {fileID: 2072320641, guid: f16f005205b762a4f9100d30066bd9e1, type: 3}
       propertyPath: strafe
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072320642, guid: f16f005205b762a4f9100d30066bd9e1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 755813225769956452, guid: f16f005205b762a4f9100d30066bd9e1,
         type: 3}
