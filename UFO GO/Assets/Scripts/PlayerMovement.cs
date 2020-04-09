@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody rb;
-    public float forwardForce = 900f;
+    public float forwardForce = 25f;
     public float strafe = 90f;
 
     // Start is called before the first frame update
