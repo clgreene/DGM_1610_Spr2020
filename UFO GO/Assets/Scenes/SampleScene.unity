@@ -174,7 +174,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -649,6 +649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 345768114}
   forwardForce: 550
+  speed: 0
   strafe: 90
 --- !u!114 &345768113
 MonoBehaviour:
@@ -670,6 +671,20 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 5694666287336457721}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &345768116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345768111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25a86131772cbd448ec762f85f3c408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: -9
+  jumpSpd: 1000
 --- !u!1 &441720978
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146.45, y: 391.53}
+  m_AnchoredPosition: {x: -196, y: 155}
   m_SizeDelta: {x: 292.89, y: 37.455}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441720980
@@ -781,7 +796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146.46, y: 462.57}
+  m_AnchoredPosition: {x: -196.01001, y: 226.03998}
   m_SizeDelta: {x: 292.91, y: 36.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487489929
@@ -1026,7 +1041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -342.4, y: 442.9}
+  m_AnchoredPosition: {x: -392, y: 208.49997}
   m_SizeDelta: {x: 99, y: 140.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &607258783
@@ -1925,6 +1940,7 @@ GameObject:
   - component: {fileID: 1083855328}
   - component: {fileID: 1083855330}
   - component: {fileID: 1083855329}
+  - component: {fileID: 1083855331}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -1948,7 +1964,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146.45003, y: 494.86}
+  m_AnchoredPosition: {x: -196.00006, y: 258.32996}
   m_SizeDelta: {x: 292.9, y: 36.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083855329
@@ -1991,6 +2007,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083855327}
   m_CullTransparentMesh: 0
+--- !u!114 &1083855331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083855327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f5c3d320ec1a24e8e121148f3d5405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelText: {fileID: 441720980}
+  scoreText: {fileID: 1083855329}
+  healthText: {fileID: 487489929}
+  ammoText: {fileID: 1258608435}
 --- !u!1001 &1199186573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2199,7 +2231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146.45, y: 427.38}
+  m_AnchoredPosition: {x: -196, y: 190.84998}
   m_SizeDelta: {x: 292.89, y: 34.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258608435
@@ -3174,6 +3206,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2072320642, guid: f16f005205b762a4f9100d30066bd9e1, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072320643, guid: f16f005205b762a4f9100d30066bd9e1, type: 3}
+      propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 755813225769956452, guid: f16f005205b762a4f9100d30066bd9e1,

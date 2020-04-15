@@ -6,18 +6,23 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody rb;
-    public float forwardForce = 25f;
+    public float forwardForce = 200f;
+    public float speed;
     public float strafe = 90f;
+    public Transform trans;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        trans = GetComponent<Transform>();
     }
 
     // Pushing UFO forward and outlining strafing movement
     void FixedUpdate()
     {
+
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
         if (Input.GetKey("d"))
