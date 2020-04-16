@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody rb;
     public float forwardForce = 200f;
-    public float speed;
+    public float speed = 25f;
     public float strafe = 90f;
     public Transform trans;
 
@@ -22,8 +22,12 @@ public class PlayerMovement : MonoBehaviour
     // Pushing UFO forward and outlining strafing movement
     void FixedUpdate()
     {
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
-        rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+        /*if (transform.position.z < 50)
+            {
+        rb.AddForce(0, 0, forwardForce * Time.deltaTime); 
+            }*/
 
         if (Input.GetKey("d"))
         {

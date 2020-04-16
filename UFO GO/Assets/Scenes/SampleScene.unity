@@ -539,7 +539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101121314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 195}
+  m_LocalPosition: {x: 0, y: 0, z: 3940}
   m_LocalScale: {x: 35, y: 1, z: 8000}
   m_Children: []
   m_Father: {fileID: 0}
@@ -648,9 +648,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 345768114}
-  forwardForce: 550
-  speed: 0
+  forwardForce: 200
+  speed: 25
   strafe: 90
+  trans: {fileID: 0}
 --- !u!114 &345768113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3225,7 +3226,7 @@ PrefabInstance:
     - target: {fileID: 755813225769956452, guid: f16f005205b762a4f9100d30066bd9e1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -55
       objectReference: {fileID: 0}
     - target: {fileID: 755813225769956452, guid: f16f005205b762a4f9100d30066bd9e1,
         type: 3}
