@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85103d825ec662d428ceb351de0275b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 100
   spin: 20
   bullet: {fileID: 3612469221758401938}
 --- !u!1001 &4684865700504773787

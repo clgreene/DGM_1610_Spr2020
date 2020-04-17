@@ -6,7 +6,7 @@ public class projectileSpeed : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed = 90;
+    public float speed = 300;
     public float spin = 20;
     public GameObject bullet;
     void Start()
