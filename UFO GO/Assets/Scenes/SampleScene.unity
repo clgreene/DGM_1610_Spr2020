@@ -234,7 +234,6 @@ GameObject:
   m_Component:
   - component: {fileID: 43493765}
   - component: {fileID: 43493766}
-  - component: {fileID: 43493767}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -268,22 +267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb6828cb132b0b45886490e9d1b663c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &43493767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43493764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f5c3d320ec1a24e8e121148f3d5405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fuelText: {fileID: 0}
-  scoreText: {fileID: 0}
-  healthText: {fileID: 0}
-  ammoText: {fileID: 0}
 --- !u!1001 &53995884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -651,7 +634,6 @@ MonoBehaviour:
   forwardForce: 200
   speed: 25
   strafe: 90
-  trans: {fileID: 0}
 --- !u!114 &345768113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2974,7 +2956,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650deed74f7ef2d46b71215a2e1ef951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rbfollow: {fileID: 0}
+  rbfollow: {fileID: 345768114}
+  distance: 275
+  player: {fileID: 2072320640}
+  dist: 0
+  speed: 100
 --- !u!65 &1896905990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3043,11 +3029,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896905988}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.016145768, z: 5.68}
-  m_LocalScale: {x: 0.053152, y: 0.053152, z: 0.053152}
+  m_LocalPosition: {x: 0, y: 2.5072885, z: 274}
+  m_LocalScale: {x: 2.6576, y: 2.6576, z: 2.6576}
   m_Children: []
-  m_Father: {fileID: 2072320640}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2046647978
 PrefabInstance:

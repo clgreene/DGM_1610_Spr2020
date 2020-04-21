@@ -7,11 +7,8 @@ public class UpdateText : MonoBehaviour
 {
 
     public Text fuelText;
-
     public Text scoreText;
-
     public Text healthText;
-
     public Text ammoText;
     
 
