@@ -637,7 +637,7 @@ PrefabInstance:
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 490.68628
+      value: 418
       objectReference: {fileID: 0}
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
@@ -762,7 +762,7 @@ PrefabInstance:
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 399.4
+      value: 379.7137
       objectReference: {fileID: 0}
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
@@ -831,7 +831,7 @@ PrefabInstance:
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 399.42798
+      value: 379.7417
       objectReference: {fileID: 0}
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
@@ -2499,7 +2499,7 @@ PrefabInstance:
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 490.9
+      value: 418.2137
       objectReference: {fileID: 0}
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
@@ -2874,7 +2874,7 @@ PrefabInstance:
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 490.95703
+      value: 418.27075
       objectReference: {fileID: 0}
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
@@ -3096,7 +3096,7 @@ PrefabInstance:
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 399.42822
+      value: 379.74194
       objectReference: {fileID: 0}
     - target: {fileID: 8593959186670402158, guid: e04efc4d3f825764faed6f842e118e59,
         type: 3}
@@ -3514,6 +3514,9 @@ MonoBehaviour:
   player: {fileID: 2072320640}
   dist: 0
   speed: 100
+  time: 1
+  wait: 1
+  bullet: {fileID: 3967643241082808912, guid: 1b2a80831f15fe448ac91ffbd76a5b02, type: 3}
 --- !u!65 &1896905990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3600,7 +3603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e562d31a7ea164b9cd839c93ba6c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 200
 --- !u!1001 &2046647978
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,6 +10,9 @@ public class EnemyMove : MonoBehaviour
     public Transform player;
     public float dist;
     public float speed = 80;
+    public int time = 1;
+    public int wait = 1;
+    public GameObject bullet;
     
 
     // Start is called before the first frame update
@@ -33,6 +36,20 @@ public class EnemyMove : MonoBehaviour
         {
             Debug.Log("Too Close");
             transform.position = new Vector3(rbfollow.worldCenterOfMass.x, 2, rbfollow.worldCenterOfMass.z + 25);
+
+            if (wait == 1)
+            {
+                wait = 0;
+                StartCoroutine(FireBullet());
+            }
+            
         }
+    }
+
+    IEnumerator FireBullet()
+    {
+        yield return new WaitForSeconds(time);
+        Instantiate(bullet, transform.position + transform.forward, transform.rotation);
+        wait = 1;
     }
 }
